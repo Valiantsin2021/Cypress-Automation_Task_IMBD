@@ -1,0 +1,31 @@
+{
+  "name": "Valentin_Lutchanka-AutomationTest",
+  "version": "1.0.0",
+  "description": "Valentin_Lutchanka-AutomationTest",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "rimraf ./cypress/results/* && rimraf ./mochawesome-report && rimraf ./index.json",
+    "test": "npx cypress run -b chrome && npm run mocha:merge && npm run mocha:marge",
+    "cy:open": "npx cypress open",
+    "mocha:merge": "npx mochawesome-merge cypress/results/*.json > index.json",
+    "mocha:marge": "npx marge index.json",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "Valentin Lutchanka",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.11.0",
+    "cypress-multi-reporters": "^1.6.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "husky": "^8.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0",
+    "prettier": "2.7.1",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2"
+  }
+}

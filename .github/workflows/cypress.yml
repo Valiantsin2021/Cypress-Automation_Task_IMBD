@@ -1,0 +1,33 @@
+name: Cypress_Underwriting_Solutions_AutomationTest
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+      - name: Install
+        run: npm install
+
+      - name: Test run
+        run: npm test
+
+      - name: Output test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Reports
+          path: mochawesome-report
+          retention-days: 20
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: mochawesome-report
