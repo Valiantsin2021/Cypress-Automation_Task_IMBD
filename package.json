@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "rimraf ./cypress/results/* && rimraf ./mochawesome-report && rimraf ./index.json",
-    "test": "npx cypress run -b chrome && npm run mocha:merge && npm run mocha:marge",
+    "test": "npx cypress run -b chrome --record --key 115c3c0c-1f0f-409c-ae3a-3eec75c56c09 && npm run mocha:merge && npm run mocha:marge",
     "cy:open": "npx cypress open",
     "mocha:merge": "npx mochawesome-merge cypress/results/*.json > index.json",
     "mocha:marge": "npx marge index.json",

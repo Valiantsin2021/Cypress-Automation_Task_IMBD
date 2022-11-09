@@ -26,6 +26,8 @@
 5. Jenkiinsfile with pipeline script to run tests in docker container
 6. DockerFile to run in docker container
 7. All methods are made universal for reusability reason with the different test scenarios (depends on "film actor name", "TV show", "TV show actor name")
+8. Cypress dashboard connected
+9. Precommit hook to run Prettier/Eslint
 
 ## Setup:
 

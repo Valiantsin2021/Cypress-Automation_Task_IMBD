@@ -7,7 +7,7 @@ const {
 } = require('../utils/constants')
 const BasePage = new Page()
 
-describe(`Should open ${baseUrl} and rate with 5 stars the second film in Top Box Office category`, () => {
+describe(`Should open ${baseUrl},`, () => {
   before(() => {
     cy.clearLocalStorage()
     cy.clearCookies()

@@ -10,7 +10,7 @@ const {
 } = require('../utils/constants')
 const BasePage = new Page()
 
-describe(`Should open ${baseUrl}, click on the '${tvShowTitle}' and select the 2nd foto of '${tvShowActorName}' in Fotos`, () => {
+describe(`Should open ${baseUrl},`, () => {
   before(() => {
     cy.clearLocalStorage()
     cy.clearCookies()

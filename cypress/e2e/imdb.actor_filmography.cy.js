@@ -10,7 +10,7 @@ const {
 } = require('../utils/constants')
 const BasePage = new Page()
 
-describe(`Should open '${baseUrl}' and sort ${actorName} filmography by Rating (Feature Film filter)`, () => {
+describe(`Should open '${baseUrl}',`, () => {
   before(() => {
     cy.clearLocalStorage()
     cy.clearCookies()
