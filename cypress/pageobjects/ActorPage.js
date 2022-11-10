@@ -6,11 +6,10 @@ class ActorPage extends BasePage {
     this.actor = ''
     this.profileHeader = 'h1 > span'
     this.oldSortSelect = 'select[name="sort"]'
-    this.newSortBtn = 'button.ipc-chip-dropdown__chip'
-    this.newRatingLink = 'div.filmography-ql-filter-container a'
-    this.ratingSortedHeader = 'h1.header'
+    this.newSortBtn = '[data-testid="nm_flmg_srt_menu"]'
+    this.newRatingLink = 'a.filmography-by-rating-ql'
+    this.filmographyHeader = 'h1.header'
     this.featureFilmInput = 'input[name="movie"]'
-    this.featureFilmsHeader = 'h1.header'
   }
   /**
    * Set the alt attribute to actors avatar image selector based on the current actor name

@@ -5,7 +5,7 @@ For example "cypress run --env actorName=Danny.DeVito,tvShowActorName=James.Gand
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  projectId: "5vkyri",
+  projectId: '5vkyri',
   chromeWebSecurity: false,
   viewportWidth: 1920,
   viewportHeight: 1080,

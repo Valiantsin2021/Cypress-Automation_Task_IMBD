@@ -4,7 +4,7 @@ class FilmPage extends BasePage {
   constructor() {
     super()
     this.filmPageHeader = 'h1[data-testid="hero-title-block__title"]'
-    this.startRateBtn = 'button.ipc-button.ipc-button--single-padding'
+    this.startRateBtn = '[data-testid="hero-rating-bar__user-rating"] button'
     this.ratingStarsBar = 'button.ipc-starbar__rating__button'
     this.ratingCount = 'div.ipc-rating-display__rating'
     this.finishRateBtn =

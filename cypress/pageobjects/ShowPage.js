@@ -4,11 +4,11 @@ class ShowPage extends BasePage {
   constructor() {
     super()
     this.showPageHeader = 'h1[data-testid="hero-title-block__title"]'
-    this.fotosLink = 'section[data-testid="Photos"] a.ipc-title-link-wrapper'
+    this.fotosLink = '[data-testid="Photos"] a.ipc-title-link-wrapper'
     this.fotoHeader = 'h1.header'
     this.fotosPersonsLinks = '#media_index_name_filters a'
     this.currentFilterTitle = '#current_filter'
-    this.personFotosList = 'div.media_index_thumb_list a'
+    this.personFotosList = '#media_index_thumbnail_grid a'
     this.personFoto = ''
   }
   /**

@@ -17,10 +17,12 @@ describe(`Should open ${baseUrl},`, () => {
     BasePage.open()
     cy.log(`Check the Top Box Office list header is '${topBoxOfficeHeaderTxt}'`)
     cy.scrollTo('bottom')
-    cy.get(BasePage.topBoxOfficeHeader).should('have.text', topBoxOfficeHeaderTxt)
+    cy.get(BasePage.topBoxOfficeHeader).should(
+      'have.text',
+      topBoxOfficeHeaderTxt
+    )
   })
   it(`click on the 2nd item on the Top box office list, and check Film Page header is visible`, () => {
-    //click the second film link on the list using index 1
     cy.log(`Click the second film link using index 1`)
     BasePage.openTopBoxOfficeFilm(1)
     cy.log(`Check the page header is displayed`)

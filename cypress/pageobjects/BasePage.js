@@ -1,10 +1,10 @@
 class BasePage {
   constructor() {
     this.searchInput = '#suggestion-search'
-    this.menuBtn = '#imdbHeader-navDrawerOpen--desktop div.ipc-button__text'
-    this.top250TVShowsLink = 'a[href="/chart/toptv/?ref_=nv_tvv_250"]'
-    this.topBoxOfficeHeader = 'div.top-box-office h3'
-    this.topBoxOfficeLinks = 'div[data-testid="boxOfficeList"] a.boxOfficeTitleLink'
+    this.menuBtn = '[aria-label="Open Navigation Drawer"]'
+    this.top250TVShowsLink = '[href="/chart/toptv/?ref_=nv_tvv_250"]'
+    this.topBoxOfficeHeader = '.top-box-office h3'
+    this.topBoxOfficeLinks = '[data-testid="boxOfficeList"] .boxOfficeTitleLink'
   }
   /**
    * Opens the Home page of imdb.com
@@ -47,10 +47,7 @@ class BasePage {
       cy.log('Wrong index provided (should be between 0 and 5)')
       return this
     } else {
-      cy.get(this.topBoxOfficeLinks)
-        .should('have.length', 6)
-        .eq(index)
-        .click()
+      cy.get(this.topBoxOfficeLinks).should('have.length', 6).eq(index).click()
       return this
     }
   }
