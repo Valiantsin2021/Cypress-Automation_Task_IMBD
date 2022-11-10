@@ -22,7 +22,7 @@ describe(`Should open '${baseUrl}',`, () => {
     ActorPage.avatar = actorName
     BasePage.searchActor(actorName, ActorPage.actor)
     cy.log(`Check the opened page has the header with text ${actorName}`)
-    cy.get(ActorPage.profileHeader).should('have.text', actorName)
+    cy.get(ActorPage.profileHeader).eq(0).should('have.text', actorName)
   })
   it(`sort filmography by Rating, and check rating sorted header is '${ratingHeaderTxt}'`, () => {
     //performs sort dependant on the 'old' or 'new' version of website is loaded
