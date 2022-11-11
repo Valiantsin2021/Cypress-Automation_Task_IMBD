@@ -17,6 +17,9 @@ let constants = {
   top250TVShowsHeaderTxt: 'Top Rated TV Shows',
   tvShowTitle: formatedTVshowTitle,
   fotosPageHeaderTxt: 'Photo Gallery',
-  tvShowActorName: formatedtvShowActorName
+  tvShowActorName: formatedtvShowActorName,
+  tvshowFoto: Cypress.env('tvShowFoto') - 1,
+  topBoxFilm: Cypress.env('topBoxFilm') - 1,
+  filmRate: Cypress.env('filmRate') - 1
 }
 module.exports = constants

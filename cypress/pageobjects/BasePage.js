@@ -20,7 +20,7 @@ class BasePage {
    */
   searchActor(name, avatar) {
     cy.get(this.searchInput).type(name)
-    cy.get(avatar).click({ force: true })
+    cy.get(avatar).eq(0).click({ force: true })
     return this
   }
   /**

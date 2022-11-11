@@ -1,7 +1,7 @@
 console.log(`\n\nStarting Chrome test with actor name, TV show title, and TV show actor name specified in env variables.\n\
 To start test with different data - please change actorName, tvShowActorName, tvShowTitle variables in cypress.config.js or\n\
 pass the desired names with --env flag through the command line (dot separated).\n\
-For example "cypress run --env actorName=Danny.DeVito,tvShowActorName=James.Gandolfini,tvShowTitle=The.Sopranos".`)
+For example "npx cypress run --env actorName=Danny.DeVito,tvShowActorName=James.Gandolfini,tvShowTitle=The.Sopranos,tvShowFoto=2,topBoxFilm=2,filmRate=5".`)
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
@@ -14,7 +14,10 @@ module.exports = defineConfig({
     env: {
       actorName: 'Nicolas Cage',
       tvShowActorName: 'Danny Trejo',
-      tvShowTitle: 'Breaking Bad'
+      tvShowTitle: 'Breaking Bad',
+      tvShowFoto: 2,
+      topBoxFilm: 2,
+      filmRate: 5
     },
     setupNodeEvents(on, config) {},
     reporter: 'mochawesome',
