@@ -27,7 +27,9 @@
 6. DockerFile to run in docker container
 7. All methods are made universal for reusability reason with the different test scenarios (depends on "film actor name", "TV show", "TV show actor name")
 8. Cypress dashboard connected
-9. Precommit hook to run Prettier/Eslint
+9. Precommit hook to run Prettier/Eslint for auto code formatting before commit
+10. Add data driven test suite (use data file to dynamically create test cases)
+11. Add allure report ( to generate HTML report - "npm run posttest")
 
 ## Setup:
 
@@ -36,6 +38,9 @@
 3. Install dependencies with "npm install"
 4. To run tests headless with report generated - "npm test"
 5. To run tests using the Launchpad - "npx cypress open"
+6. To run only data driven test suite - "npm run test:dd"
+7. To run in free mode with allure reporter - "npx cypress run --env allure=true --spec <path to spec file or folder>"
+8. To run env_driven test suite axample "npx cypress run --env actorName=<Billy.Bob.Thornton>,tvShowActorName=<Billy.Bob.Thornton>,tvShowTitle=<Fargo>,tvShowFoto=<1>,topBoxFilm=<3>"
 
 ## To run test dockerized:
 

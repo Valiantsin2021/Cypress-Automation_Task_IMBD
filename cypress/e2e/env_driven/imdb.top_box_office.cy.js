@@ -1,12 +1,12 @@
-const Page = require('../pageobjects/BasePage')
-const FilmPage = require('../pageobjects/FilmPage')
+const Page = require('../../pageobjects/BasePage')
+const FilmPage = require('../../pageobjects/FilmPage')
 const {
   topBoxOfficeHeaderTxt,
   signInUrl,
   baseUrl,
   topBoxFilm,
   filmRate
-} = require('../utils/constants')
+} = require('../../utils/constants')
 const BasePage = new Page()
 
 describe(`Should open ${baseUrl},`, () => {

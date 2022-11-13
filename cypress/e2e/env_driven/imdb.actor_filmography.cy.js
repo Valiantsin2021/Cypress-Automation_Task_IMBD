@@ -1,5 +1,5 @@
-const Page = require('../pageobjects/BasePage')
-const ActorPage = require('../pageobjects/ActorPage')
+const Page = require('../../pageobjects/BasePage')
+const ActorPage = require('../../pageobjects/ActorPage')
 const {
   actorName,
   ratingOptionOld,
@@ -7,7 +7,7 @@ const {
   ratingHeaderTxt,
   featureHeaderTxt,
   baseUrl
-} = require('../utils/constants')
+} = require('../../utils/constants')
 const BasePage = new Page()
 
 describe(`Should open '${baseUrl}',`, () => {

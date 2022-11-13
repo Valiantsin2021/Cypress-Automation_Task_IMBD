@@ -1,6 +1,6 @@
-const Page = require('../pageobjects/BasePage')
-const ShowPage = require('../pageobjects/ShowPage')
-const Top250TVShowsPage = require('../pageobjects/Top250TVShowsPage')
+const Page = require('../../pageobjects/BasePage')
+const ShowPage = require('../../pageobjects/ShowPage')
+const Top250TVShowsPage = require('../../pageobjects/Top250TVShowsPage')
 const {
   baseUrl,
   top250TVShowsHeaderTxt,
@@ -8,7 +8,7 @@ const {
   fotosPageHeaderTxt,
   tvShowActorName,
   tvshowFoto
-} = require('../utils/constants')
+} = require('../../utils/constants')
 const BasePage = new Page()
 
 describe(`Should open ${baseUrl},`, () => {
@@ -19,10 +19,10 @@ describe(`Should open ${baseUrl},`, () => {
   it(`click on the Menu button, open Top 250 TV shows list and check page's header is '${top250TVShowsHeaderTxt}'`, () => {
     cy.log(`Open IMDB Home page`)
     BasePage.open()
-    BasePage.openTop250TVShows()
     cy.log(`Click on the Menu button, open Top 250 TV shows list`)
-    cy.get(Top250TVShowsPage.header).should('have.text', top250TVShowsHeaderTxt)
+    BasePage.openTop250TVShows()
     cy.log(`Check the page header is '${top250TVShowsHeaderTxt}'`)
+    cy.get(Top250TVShowsPage.header).should('have.text', top250TVShowsHeaderTxt)
   })
   it(`click on ${tvShowTitle} TV show link, and check page's header is '${tvShowTitle}'`, () => {
     cy.log(`Click on ${tvShowTitle} TV show link`)

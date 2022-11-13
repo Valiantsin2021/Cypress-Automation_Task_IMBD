@@ -3,6 +3,7 @@ To start test with different data - please change actorName, tvShowActorName, tv
 pass the desired names with --env flag through the command line (dot separated).\n\
 For example "npx cypress run --env actorName=Danny.DeVito,tvShowActorName=James.Gandolfini,tvShowTitle=The.Sopranos,tvShowFoto=2,topBoxFilm=2,filmRate=5".`)
 const { defineConfig } = require('cypress')
+const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 
 module.exports = defineConfig({
   projectId: '5vkyri',
@@ -19,9 +20,12 @@ module.exports = defineConfig({
       topBoxFilm: 2,
       filmRate: 5
     },
-    setupNodeEvents(on, config) {},
-    reporter: 'mochawesome',
-    reporterOptions: {
+    setupNodeEvents(on, config) {
+      allureWriter(on, config)
+      return config
+    },
+    reporterEnabled: 'mochawesome, spec',
+    mochawesomeReporterOptions: {
       reportDir: 'cypress/results',
       overwrite: false,
       html: false,

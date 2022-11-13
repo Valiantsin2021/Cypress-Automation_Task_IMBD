@@ -19,7 +19,7 @@ class BasePage {
    * @param  {String} avatar - selector for current actor avatar
    */
   searchActor(name, avatar) {
-    cy.get(this.searchInput).type(name)
+    cy.get(this.searchInput).clear().type(name)
     cy.get(avatar).eq(0).click({ force: true })
     return this
   }
