@@ -9,7 +9,7 @@
     "test:dd": "npx cypress run --spec cypress/e2e/data_driven/*.js",
     "test:ed": "npx cypress run --spec cypress/e2e/env_driven/*.js",
     "cy:open": "npx cypress open",
-    "posttest": "allure generate allure-results --clean -o allure-report",
+    "allure": "allure generate allure-results --clean -o allure-report",
     "prepare": "husky install",
     "cy:dashboard": "npx cypress run --record --key 115c3c0c-1f0f-409c-ae3a-3eec75c56c09 --spec cypress/e2e/env_driven/*.js"
   },
