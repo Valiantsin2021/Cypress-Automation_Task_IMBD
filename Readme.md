@@ -29,7 +29,7 @@
 8. Cypress dashboard connected
 9. Precommit hook to run Prettier/Eslint for auto code formatting before commit
 10. Add data driven test suite (use data file to dynamically create test cases)
-11. Add allure report ( to generate HTML report - "npm run posttest")
+11. Add allure report ( to generate HTML report - "npm run allure")
 
 ## Setup:
 
@@ -43,6 +43,7 @@
 8. To run env_driven test suite axample "npx cypress run --env actorName=<Billy.Bob.Thornton>,tvShowActorName=<Billy.Bob.Thornton>,tvShowTitle=<Fargo>,tvShowFoto=<1>,topBoxFilm=<3>"
 9. To run env suite with dashboard - "npm run cy:dashboard"
 10. To make history allure report run "mkdir allure-results/history || echo "history folder already in place...continuing :)" && cp allure-report/history/\* ./allure-results/history && echo "Allure trends updated!" allure generate allure-results --clean -o allure-report && allure open allure-report"
+11. To generate Allure HTML report - "npm run allure"
 
 ## To run test dockerized:
 
