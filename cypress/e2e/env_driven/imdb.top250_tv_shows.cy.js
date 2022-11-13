@@ -11,7 +11,7 @@ const {
 } = require('../../utils/constants')
 const BasePage = new Page()
 
-describe(`Should open ${baseUrl},`, () => {
+describe(`Should open ${baseUrl}, ENV_driven-tv_shows`, () => {
   before(() => {
     cy.clearLocalStorage()
     cy.clearCookies()

@@ -10,7 +10,7 @@ const {
 } = require('../../utils/constants')
 const BasePage = new Page()
 
-describe(`Should open '${baseUrl}',`, () => {
+describe(`Should open '${baseUrl}', ENV_driven-filmography`, () => {
   before(() => {
     cy.clearLocalStorage()
     cy.clearCookies()

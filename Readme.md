@@ -41,6 +41,8 @@
 6. To run only data driven test suite - "npm run test:dd"
 7. To run in free mode with allure reporter - "npx cypress run --env allure=true --spec <path to spec file or folder>"
 8. To run env_driven test suite axample "npx cypress run --env actorName=<Billy.Bob.Thornton>,tvShowActorName=<Billy.Bob.Thornton>,tvShowTitle=<Fargo>,tvShowFoto=<1>,topBoxFilm=<3>"
+9. To run env suite with dashboard - "npm run cy:dashboard"
+10. To make history allure report run "mkdir allure-results/history || echo "history folder already in place...continuing :)" && cp allure-report/history/\* ./allure-results/history && echo "Allure trends updated!" allure generate allure-results --clean -o allure-report && allure open allure-report"
 
 ## To run test dockerized:
 

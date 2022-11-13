@@ -13,6 +13,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://www.imdb.com/',
     env: {
+      allure: true,
       actorName: 'Nicolas Cage',
       tvShowActorName: 'Danny Trejo',
       tvShowTitle: 'Breaking Bad',
@@ -22,14 +23,17 @@ module.exports = defineConfig({
     },
     setupNodeEvents(on, config) {
       allureWriter(on, config)
+      require('cypress-mochawesome-reporter/plugin')(on)
       return config
     },
-    reporterEnabled: 'mochawesome, spec',
-    mochawesomeReporterOptions: {
-      reportDir: 'cypress/results',
-      overwrite: false,
-      html: false,
-      json: true
+    reporter: 'cypress-mochawesome-reporter',
+    reporterOptions: {
+      reportDir: 'mochawesome-report',
+      charts: true,
+      reportPageTitle: 'custom-title',
+      embeddedScreenshots: true,
+      inlineAssets: true,
+      saveAllAttempts: false
     },
     video: false,
     screenshotOnRunFailure: true,

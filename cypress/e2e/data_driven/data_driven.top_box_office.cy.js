@@ -8,7 +8,7 @@ const {
 const data = require('../../utils/data')
 const BasePage = new Page()
 
-describe(`Should open ${baseUrl},`, () => {
+describe(`Should open ${baseUrl}, Data_driven-top_box`, () => {
   before(() => {
     cy.clearLocalStorage()
     cy.clearCookies()
