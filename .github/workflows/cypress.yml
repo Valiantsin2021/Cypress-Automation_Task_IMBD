@@ -17,14 +17,11 @@ jobs:
 
       - name: Test run
         run: npm test
-      - name: Test report generation
-        run: npm run allure
-
       - name: Output test results
         uses: actions/upload-artifact@v3
         with:
           name: Reports
-          path: allure-report
+          path: mochawesome-report
           retention-days: 20
       - name: Deploy report to Github Pages
         if: always()
@@ -32,4 +29,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-report
+          PUBLISH_DIR: mochawesome-report
