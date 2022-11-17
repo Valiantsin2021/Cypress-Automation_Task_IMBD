@@ -1,7 +1,8 @@
 console.log(`\n\nStarting Chrome test with actor name, TV show title, and TV show actor name specified in env variables.\n\
 To start test with different data - please change actorName, tvShowActorName, tvShowTitle variables in cypress.config.js or\n\
 pass the desired names with --env flag through the command line (dot separated).\n\
-For example "npx cypress run --env actorName=Danny.DeVito,tvShowActorName=James.Gandolfini,tvShowTitle=The.Sopranos,tvShowFoto=2,topBoxFilm=2,filmRate=5".`)
+For example "npx cypress run --env actorName=Danny.DeVito,tvShowActorName=James.Gandolfini,\n\
+tvShowTitle=The.Sopranos,tvShowFoto=2,topBoxFilm=2,filmRate=5".`)
 const { defineConfig } = require('cypress')
 const allureWriter = require('@shelex/cypress-allure-plugin/writer')
 
@@ -30,7 +31,7 @@ module.exports = defineConfig({
     reporterOptions: {
       reportDir: 'mochawesome-report',
       charts: true,
-      reportPageTitle: 'custom-title',
+      reportPageTitle: 'IMDB Cypress test for Verisk',
       embeddedScreenshots: true,
       inlineAssets: true,
       saveAllAttempts: false

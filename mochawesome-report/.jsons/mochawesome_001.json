@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-17T13:42:03.467Z",
+    "end": "2022-11-17T13:42:31.510Z",
+    "duration": 28043,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02d3b195-392b-46a1-be84-581ba47dbb8e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\env_driven\\imdb.top250_tv_shows.cy.js",
+      "file": "cypress\\e2e\\env_driven\\imdb.top250_tv_shows.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e42b06a0-239a-4fdf-a16c-49e729059c07",
+          "title": "Should open https://www.imdb.com/, ENV_driven-tv_shows",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "click on the Menu button, open Top 250 TV shows list and check page's header is 'Top Rated TV Shows'",
+              "fullTitle": "Should open https://www.imdb.com/, ENV_driven-tv_shows click on the Menu button, open Top 250 TV shows list and check page's header is 'Top Rated TV Shows'",
+              "timedOut": null,
+              "duration": 13654,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(`Open IMDB Home page`);\nBasePage.open();\ncy.log(`Click on the Menu button, open Top 250 TV shows list`);\nBasePage.openTop250TVShows();\ncy.log(`Check the page header is '${top250TVShowsHeaderTxt}'`);\ncy.get(Top250TVShowsPage.header).should('have.text', top250TVShowsHeaderTxt);",
+              "err": {},
+              "uuid": "5f38b089-de90-4e8d-b2bf-be4cf8db0242",
+              "parentUUID": "e42b06a0-239a-4fdf-a16c-49e729059c07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "click on Breaking Bad TV show link, and check page's header is 'Breaking Bad'",
+              "fullTitle": "Should open https://www.imdb.com/, ENV_driven-tv_shows click on Breaking Bad TV show link, and check page's header is 'Breaking Bad'",
+              "timedOut": null,
+              "duration": 3705,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(`Click on ${tvShowTitle} TV show link`);\nTop250TVShowsPage.clickShowLink(tvShowTitle);\ncy.log(`Check the page header is '${tvShowTitle}'`);\ncy.get(ShowPage.showPageHeader).should('have.text', tvShowTitle);",
+              "err": {},
+              "uuid": "3f1c0b91-74f6-4237-aaa5-24ca4e51b03e",
+              "parentUUID": "e42b06a0-239a-4fdf-a16c-49e729059c07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "go to the Photos, and check pages header is 'Photo Gallery'",
+              "fullTitle": "Should open https://www.imdb.com/, ENV_driven-tv_shows go to the Photos, and check pages header is 'Photo Gallery'",
+              "timedOut": null,
+              "duration": 3378,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(`Click on the Photos link`);\nShowPage.clickFotos();\ncy.log(`Check the page header is '${fotosPageHeaderTxt}'`);\ncy.get(ShowPage.fotoHeader).should('have.text', fotosPageHeaderTxt);",
+              "err": {},
+              "uuid": "0c79b538-c40a-44c8-a05b-34742c3536f0",
+              "parentUUID": "e42b06a0-239a-4fdf-a16c-49e729059c07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "display only Danny Trejo's photos, and check current filter title text is 'Danny Trejo'",
+              "fullTitle": "Should open https://www.imdb.com/, ENV_driven-tv_shows display only Danny Trejo's photos, and check current filter title text is 'Danny Trejo'",
+              "timedOut": null,
+              "duration": 4709,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(`Display only ${tvShowActorName}'s photos`);\nShowPage.choosePersonFotos(tvShowActorName);\ncy.log(`Check the current filter title text is '${tvShowActorName}'`);\ncy.get(ShowPage.currentFilterTitle).should('have.text', tvShowActorName);",
+              "err": {},
+              "uuid": "4a3426f3-7452-4da7-b2f0-5d033eff51a8",
+              "parentUUID": "e42b06a0-239a-4fdf-a16c-49e729059c07",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "click on the photo number 1 in the list, and check the foto is displayed",
+              "fullTitle": "Should open https://www.imdb.com/, ENV_driven-tv_shows click on the photo number 1 in the list, and check the foto is displayed",
+              "timedOut": null,
+              "duration": 2483,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.log(`Click on the photo number ${tvshowFoto} in the list`);\nShowPage.clickPersonFoto(tvshowFoto);\nShowPage.fotoAttr = tvShowActorName;\ncy.log(`Check the 2nd foto of ${tvShowActorName} is displayed`);\ncy.get(ShowPage.personFoto).should('be.visible');",
+              "err": {},
+              "uuid": "d1b3a0bb-5ba3-4b31-961f-69cee4340ace",
+              "parentUUID": "e42b06a0-239a-4fdf-a16c-49e729059c07",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5f38b089-de90-4e8d-b2bf-be4cf8db0242",
+            "3f1c0b91-74f6-4237-aaa5-24ca4e51b03e",
+            "0c79b538-c40a-44c8-a05b-34742c3536f0",
+            "4a3426f3-7452-4da7-b2f0-5d033eff51a8",
+            "d1b3a0bb-5ba3-4b31-961f-69cee4340ace"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 27929,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mochawesome-report\\.jsons",
+        "charts": true,
+        "reportPageTitle": "IMDB Cypress test for Verisk",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

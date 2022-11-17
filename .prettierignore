@@ -2,3 +2,5 @@ node_modules/
 mochawesome-report/
 results/
 index.json
+allure-report
+allure-results

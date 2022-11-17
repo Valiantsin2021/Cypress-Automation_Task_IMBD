@@ -13,7 +13,7 @@
 
 ## If you want to use another parameters in the test ('actor', 'TV show actor' and 'TV show name') please change actorName, tvShowActorName, tvShowTitle, tvShowfoto, topBoxFilm, filmRate variables in cypress.config.js, or pass with --env flag through the command line (dot separated). For example "npx cypress run --env actorName=Billy.Bob.Thornton,tvShowActorName=Billy.Bob.Thornton,tvShowTitle=Fargo,tvShowFoto=1,topBoxFilm=3".
 
-## Report page (available if repository is public) https://valiantsin2021.github.io/Valentin_Lutchanka_AutomationTest/
+## Report page (available if repository is public) https://valiantsin2021.github.io/Cypress-Automation_Task_IMBD/
 
 ## Job done:
 

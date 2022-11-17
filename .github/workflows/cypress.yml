@@ -1,4 +1,4 @@
-name: Cypress_Underwriting_Solutions_AutomationTest
+name: Cypress_AutomationTest_IMDB
 
 on: [push]
 
@@ -11,7 +11,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: '16.x'
       - name: Install
         run: npm install
 
@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Reports
-          path: mochawesome-report
+          path: allure-report
           retention-days: 20
       - name: Deploy report to Github Pages
         if: always()
@@ -30,4 +30,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: mochawesome-report
+          PUBLISH_DIR: allure-report
