@@ -16,7 +16,7 @@ jobs:
         run: npm install
 
       - name: Test run
-        run: npm test && npm run allure
+        run: npm test && allure generate allure-results --clean -o allure-report
 
       - name: Output test results
         uses: actions/upload-artifact@v3
