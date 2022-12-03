@@ -9,9 +9,11 @@
     "test:dd": "npx cypress run --spec cypress/e2e/data_driven/*.js",
     "test:ed": "npx cypress run --spec cypress/e2e/env_driven/*.js",
     "cy:open": "npx cypress open",
+    "sorry:cy": "npx cross-env CYPRESS_API_URL='http://localhost:1234/' npx cy2 run --parallel --record --key somekey --ci-build-id hello-cypress",
     "allure": "allure generate allure-results --clean -o allure-report",
     "prepare": "husky install",
-    "cy:dashboard": "npx cypress run --record --key 115c3c0c-1f0f-409c-ae3a-3eec75c56c09 --spec cypress/e2e/env_driven/*.js"
+    "cy:dashboard": "npx cypress run --record --key 115c3c0c-1f0f-409c-ae3a-3eec75c56c09 --spec cypress/e2e/env_driven/*.js",
+    "docs": "jsdoc"
   },
   "keywords": [],
   "author": "Valentin Lutchanka",
@@ -28,5 +30,9 @@
     "prettier": "2.7.1",
     "pretty-quick": "^3.1.3",
     "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "cy2": "^3.2.0"
   }
 }

@@ -1,3 +1,6 @@
+/**
+ * Base page class for IMDB.com tests with cypress
+ */
 class BasePage {
   constructor() {
     this.searchInput = '#suggestion-search'

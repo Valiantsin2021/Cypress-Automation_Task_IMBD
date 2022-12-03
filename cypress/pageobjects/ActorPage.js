@@ -1,5 +1,8 @@
 const BasePage = require('./BasePage')
 
+/**
+ * Actors page class for IMDB.com tests with cypress
+ */
 class ActorPage extends BasePage {
   constructor() {
     super()
@@ -24,6 +27,7 @@ class ActorPage extends BasePage {
    * Sort filmography by Rating based on the variant of the page loaded (old design or new)
    * Sor performed with this.oldSortSelect for old page design and with this.newSortBtn and
    * this.newRatingLinkfor new page design
+   *
    * @param  {String} ratingOptionOld - text of old select option
    * @param  {String} ratingLinkTxt - inner text of rating selector link
    */
