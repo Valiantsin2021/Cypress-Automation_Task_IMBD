@@ -1,5 +1,7 @@
 # JS automation tests with Cypress framework
 
+## Test statuse badge: ![](https://github.com/Valiantsin2021/Cypress-Automation_Task_IMBD/workflows/Cypress_AutomationTest_IMDB/badge.svg)
+
 ## This repository purpose is to perform test automation on IMDB.com website with the following scenarios:
 
 1. Go to IMDb.com, search for Nicolas Cage and access his profile; then sort filmography by Rating, and
