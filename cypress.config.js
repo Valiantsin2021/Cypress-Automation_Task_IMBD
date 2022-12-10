@@ -24,6 +24,12 @@ module.exports = defineConfig({
     },
     setupNodeEvents(on, config) {
       allureWriter(on, config)
+      on('task', {
+        print(s) {
+          console.log(s)
+          return null
+        }
+      })
       require('cypress-mochawesome-reporter/plugin')(on)
       return config
     },

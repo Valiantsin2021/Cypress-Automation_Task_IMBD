@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "rimraf ./cypress/results/* && rimraf ./mochawesome-report && rimraf ./index.json && rimraf ./allure-report && rimraf allure-results",
-    "test": "npx cypress run -b chrome",
+    "test": "npx cypress run",
     "test:dd": "npx cypress run --spec cypress/e2e/data_driven/*.js",
     "test:ed": "npx cypress run --spec cypress/e2e/env_driven/*.js",
     "cy:open": "npx cypress open",
