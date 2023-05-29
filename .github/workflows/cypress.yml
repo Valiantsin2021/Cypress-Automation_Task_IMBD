@@ -17,7 +17,9 @@ jobs:
         run: npm install
 
       - name: Test run
-        run: npm run test:ed && npm run allure && npm run allure-notify
+        run: npm run test:ed && npm run allure
+      - name: telegram push
+        run: npm run allure-notify
       - name: Output test results
         uses: actions/upload-artifact@v3
         with:

@@ -17,7 +17,8 @@
     "format": "prettier --write .",
     "lint": "eslint ./cypress/**/*.js",
     "lint:fix": "eslint ./cypress/**/*.js --fix",
-    "allure-notify": "java \"-DconfigFile=notifications/config.json\" -jar notifications/allure-notifications-4.2.1.jar"
+    "allure-notify": "java -DconfigFile=notifications/config.json -Dcom.sun.net.ssl.checkRevocation=false -jar notifications/allure-notifications-4.2.1.jar",
+    "grafana": "grafana"
   },
   "keywords": [],
   "author": "Valentin Lutchanka",
