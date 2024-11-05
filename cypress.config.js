@@ -5,7 +5,6 @@ For example "npx cypress run --env actorName=Danny.DeVito,tvShowActorName=James.
 tvShowTitle=The.Sopranos,tvShowFoto=2,topBoxFilm=2,filmRate=5".`)
 const { defineConfig } = require('cypress')
 const allureWriter = require('@shelex/cypress-allure-plugin/writer')
-
 module.exports = defineConfig({
   projectId: '5vkyri',
   chromeWebSecurity: false,
