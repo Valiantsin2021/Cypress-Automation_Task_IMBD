@@ -1,4 +1,4 @@
-FROM cypress/included:10.11.0
+FROM cypress/included:12.13.0
 RUN mkdir /app
 WORKDIR /app
 COPY package.json /app
